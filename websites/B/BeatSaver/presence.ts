@@ -21,21 +21,23 @@ presence.on("UpdateData", async () => {
     ).value;
   } else if (document.location.pathname.includes("/maps/")) {
     if (document.querySelector("a[class~='active']")) {
-      presenceData.smallImageKey = `${(
+      presenceData.smallImageKey =
+        (
+          document
+            .querySelector("a[class~='active']")
+            .childNodes.item(0) as HTMLElement
+        ).title.toLowerCase() +
         document
           .querySelector("a[class~='active']")
-          .childNodes.item(0) as HTMLImageElement
-      ).alt.toLowerCase()}${document
-        .querySelector("a[class~='active']")
-        .childNodes.item(1)
-        .textContent.replace("+", "_")
-        .toLowerCase()}`;
+          .childNodes.item(1)
+          .textContent.replace("+", "_")
+          .toLowerCase();
       presenceData.smallImageText = `${
         (
           document
             .querySelector("a[class~='active']")
-            .childNodes.item(0) as HTMLImageElement
-        ).alt
+            .childNodes.item(0) as HTMLElement
+        ).title
       } ${
         document.querySelector("a[class~='active']").childNodes.item(1)
           .textContent

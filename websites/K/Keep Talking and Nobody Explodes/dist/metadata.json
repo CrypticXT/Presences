@@ -13,10 +13,9 @@
   "url": [
     "keeptalkinggame.com",
     "www.keeptalkinggame.com",
-    "bombmanual.com",
     "www.bombmanual.com"
   ],
-  "version": "2.0.0",
+  "version": "1.3.8",
   "logo": "https://i.imgur.com/rrIWGBq.png",
   "thumbnail": "https://i.imgur.com/9ohIvQW.png",
   "color": "#222327",
@@ -26,11 +25,5 @@
     "ktane",
     "bomb",
     "manual"
-  ],
-  "settings": [
-    {
-      "id": "lang",
-      "multiLanguage": true
-    }
   ]
 }
